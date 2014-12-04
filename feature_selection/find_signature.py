@@ -1,13 +1,11 @@
-#!/usr/bin/python
-
 import pickle
 import numpy
 numpy.random.seed(42)
 
 
 ### the words (features) and authors (labels), already largely processed
-words_file = "word_data.pkl" ### you made this in previous mini-project
-authors_file = "email_authors.pkl"  ### this too
+words_file = "../text_learning/your_word_data.pkl" ### you made this in previous mini-project
+authors_file = "../text_learning/your_email_authors.pkl"  ### this too
 word_data = pickle.load( open(words_file, "r"))
 authors = pickle.load( open(authors_file, "r") )
 
@@ -30,10 +28,3 @@ features_test  = vectorizer.transform(features_test).toarray()
 ### train on only 150 events to put ourselves in this regime
 features_train = features_train[:150]
 labels_train   = labels_train[:150]
-
-
-
-### your code goes here
-
-
-
